@@ -7,21 +7,4 @@ from rich.live import Live
 
 console = Console()
 
-# constantes, caras de los dados
 
-DADO_D4 = 4
-DADO_D6 = 6
-DADO_D8 = 8
-DADO_D10 = 10
-DADO_D12 = 12
-DADO_D20 = 20
-
-#bucle principal
-while True:
-    #titulo del programa coloreado de amarillo
-    print("\n[yellow]Simulador de Dados[/yellow]")
-    #menu de opciones
-    print("1. Lanzar los dados ")
-    print("2. Ver estadisticas (proximamente)")
-    print("3. Salir")
-    
