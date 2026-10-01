@@ -42,3 +42,14 @@ while True:
         continue
     elif opcion_menu != 1:
         console.print("[bold red]Opcion no valida.[/bold red]")
+
+    #seleccion del tipo de dado
+    console.print("\n[bold orange]---Tipos de dados---[/bold orange]")
+    console.print("1. D4  (4 caras)")
+    console.print("2. D6  (6 caras)")
+    console.print("3. D8  (8 caras)")
+    console.print("4. D10 (10 caras)")
+    console.print("5. D12 (12 caras)")
+    console.print("6. D20 (20 caras)")
+    
+    
