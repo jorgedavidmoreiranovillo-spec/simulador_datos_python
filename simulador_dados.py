@@ -24,4 +24,11 @@ while True:
     print("1. Lanzar los dados ")
     print("2. Ver estadisticas (proximamente)")
     print("3. Salir")
+    #control de excepciones para el menu
+    try:
+        opcion = int(input("\nElige una opcion: "))
+    except ValueError:
+        #mensaje de error un rojo
+        print("[bold red]Opcion no valida. Por favor, introduce un numero.[/bold red]")
+        continue #salto al inicio del bucle si algo falla
     
