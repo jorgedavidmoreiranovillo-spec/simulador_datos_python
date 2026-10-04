@@ -81,4 +81,14 @@ while True:
             break #si la entrada es correcta se sale del bucle para validar que hemos puesto al menos un dado
         except ValueError:
             console.print("[bold red]introduce un numero valido (que sea entero positivo)[\bold red]")
-            
+    
+    #efecto para que se vea la animacion de los numeros pasar con el Live
+    console.print("[italic bold]LANZANDO DADOS...[\italic bold]")
+    # with Live muestra y actualiza un panel en la terminal mientras dura este bloque
+    with Live(Panel("dando vueltas...", title="simulacion"), refresh_per_second=10) as live: #
+        bucle_animacion = 0 
+        while bucle_animacion < 12: #asi cambia de valor 12 veces  
+            valor_temporal = random.randint(1, caras_dado)
+            live.update(Panel("[italic bold]GIRANDO DADOS...[\italic bold]"))
+            time.sleep(0.1)  # pausa de 0,1 segundos para que la animacion se pueda ver
+            bucle_animacion += 1
