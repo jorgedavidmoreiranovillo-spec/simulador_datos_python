@@ -69,3 +69,16 @@ while True:
     else:
         console.print("[bold red]Tipo de dado no válido.[/bold red]")
         continue
+    
+    #validacion de los dados
+    cantidad_dados = 0 
+    while True:
+        try: #se va a entrar en este bucle para que el programa nos haga lanzar al menos un dado
+            cantidad_dados = int(input("¿cuantos dados vas a lanzar?"))
+            if cantidad_dados <=0:
+                console.print("[italic orange]debe haber al menos 1 dado [\italic orange]")
+                continue
+            break #si la entrada es correcta se sale del bucle para validar que hemos puesto al menos un dado
+        except ValueError:
+            console.print("[bold red]introduce un numero valido (que sea entero positivo)[\bold red]")
+            
