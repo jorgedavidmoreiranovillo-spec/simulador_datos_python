@@ -52,4 +52,20 @@ while True:
     console.print("5. D12 (12 caras)")
     console.print("6. D20 (20 caras)")
     
-    
+    #limite de caras del dado
+    caras_dado = 0
+    if opcion_dado == 1:
+        caras_dado = DADO_D4
+    elif opcion_dado == 2:
+        caras_dado = DADO_D6
+    elif opcion_dado == 3:
+        caras_dado = DADO_D8
+    elif opcion_dado == 4:
+        caras_dado = DADO_D10
+    elif opcion_dado == 5:
+        caras_dado = DADO_D12
+    elif opcion_dado == 6:
+        caras_dado = DADO_D20
+    else:
+        console.print("[bold red]Tipo de dado no válido.[/bold red]")
+        continue
