@@ -92,3 +92,14 @@ while True:
             live.update(Panel("[italic bold]GIRANDO DADOS...[\italic bold]"))
             time.sleep(0.1)  # pausa de 0,1 segundos para que la animacion se pueda ver
             bucle_animacion += 1
+            
+    #lazamiento de los dados logico
+    suma_total=0
+    texto_resultados = "" #acumulador de texto
+    
+    contador= 1
+    while contador <= cantidad_dados:
+        tirada = random.randint(1, caras_dado)
+        suma_total += tirada #acumular numero
+        
+        
