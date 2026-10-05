@@ -19,18 +19,18 @@ DADO_D20 = 20
 #bucle principal
 while True:
     #titulo del programa coloreado de amarillo
-    print("\n[yellow]Simulador de Dados[/yellow]")
+    console.print("\n[yellow] Simulador de Dados [/yellow]")
     #menu de opciones
-    print("1. Lanzar los dados ")
-    print("2. Ver estadisticas (proximamente)")
-    print("3. Salir")
+    console.print("1. Lanzar los dados ")
+    console.print("2. Ver estadisticas (proximamente)")
+    console.print("3. Salir")
 
     #control de excepciones para el menu
     try:
         opcion_menu = int(input("\nElige una opcion: "))
     except ValueError:
         #mensaje de error un rojo
-        print("[bold red]Opcion no valida. Por favor, introduce un numero.[/bold red]")
+        console.print("[bold red]Opcion no valida. Por favor, introduce un numero.[/bold red]")
         continue #salto al inicio del bucle si algo falla
     
     
@@ -63,7 +63,7 @@ while True:
         continue
     
     #limite de caras del dado
-    caras_dado = 0
+    caras_dado = 0   
     if opcion_dado == 1:
         caras_dado = DADO_D4
     elif opcion_dado == 2:
