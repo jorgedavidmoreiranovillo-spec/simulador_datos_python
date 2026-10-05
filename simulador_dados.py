@@ -32,6 +32,8 @@ while True:
         #mensaje de error un rojo
         print("[bold red]Opcion no valida. Por favor, introduce un numero.[/bold red]")
         continue #salto al inicio del bucle si algo falla
+    
+    
     #seleccion de las opciones
     if opcion_menu == 3:
         console.print("\n[bold green]saliendo del programa...[/bold green]")
@@ -42,6 +44,7 @@ while True:
         continue
     elif opcion_menu != 1:
         console.print("[bold red]Opcion no valida.[/bold red]")
+        continue
 
     #seleccion del tipo de dado
     console.print("\n[bold orange]---Tipos de dados---[/bold orange]")
@@ -51,6 +54,13 @@ while True:
     console.print("4. D10 (10 caras)")
     console.print("5. D12 (12 caras)")
     console.print("6. D20 (20 caras)")
+    
+    #seleccion del tipo de dado que se quiere lanzar
+    try:
+        opcion_dado = int(input("Selecciona el tipo de dado (1-6): "))
+    except ValueError:
+        console.print("[bold red]Error: Entrada no numérica.[/bold red]")
+        continue
     
     #limite de caras del dado
     caras_dado = 0
