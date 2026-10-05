@@ -102,4 +102,14 @@ while True:
         tirada = random.randint(1, caras_dado)
         suma_total += tirada #acumular numero
         
-        
+    #asignacion de color segun el valor, verde es maximo, rojo es 1, amarillo es el resto
+    if tirada == caras_dado:
+        color = "bold green"
+    elif tirada == 1:
+        color = "bold red"
+    else:
+        color = "bold yellow"
+    #se le asigna el color a cada tirada segun lo que salga
+    texto_resultados += f"dado {contador}: [{color}]{tirada}[/{color}]\n"
+    contador += 1
+    
