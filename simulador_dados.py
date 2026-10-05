@@ -102,7 +102,7 @@ while True:
         tirada = random.randint(1, caras_dado)
         suma_total += tirada #acumular numero
         
-    #asignacion de color segun el valor, verde es maximo, rojo es 1, amarillo es el resto
+    #asignacion de color segun el valor, verde es maximo, rojo es 1 lo minimo, amarillo es el resto
     if tirada == caras_dado:
         color = "bold green"
     elif tirada == 1:
@@ -112,4 +112,13 @@ while True:
     #se le asigna el color a cada tirada segun lo que salga
     texto_resultados += f"dado {contador}: [{color}]{tirada}[/{color}]\n"
     contador += 1
+    #operacion para calcular el promedio con conversion
+    promedio = suma_total / cantidad_dados
+    
+    #enseñar resultados
+    salida = (
+        f"{texto_resultados}\n"
+        f"\n[bold white]Suma total: [/bold white] [sky blue]{suma_total}[/sky blue]\n"
+        f"[bold white]Promedio:[/bold white] [purple]{promedio:.2f}[/purple]")
+    console.print(Panel(salida, title=f"[bold italic cyan]resultados tirada (D{caras_dado})[/bold italic cyan]", expand=False))
     
